@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- meta charset -->
+        <meta charset="utf-8">
+        <!-- site title -->
+        <title>PlantShop</title>
+    <style media="screen">
+      h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 150%;
+}
+    </style>
+    </head>
+
+    <body>
+      <div id="root"></div>
+      <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      ></script>
+      <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      ></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"
+      ></script>
+      <script type="text/babel">
+        function Header() {
+          return (<h1>La maison jungle !</h1>)
+
+        }
+        ReactDOM.render(
+          <Header />,
+           document.getElementById('root')
+         )
+
+      </script>
+
+    </body>
+
+</html>
