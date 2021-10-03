@@ -1,43 +1,56 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- meta charset -->
-        <meta charset="utf-8">
-        <!-- site title -->
-        <title>PlantShop</title>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <!-- meta charset -->
+    <meta charset="utf-8">
+    <!-- site title -->
+    <title>PlantShop</title>
     <style media="screen">
       h1 {
-  color: blue;
-  font-family: verdana;
-  font-size: 150%;
-}
+        color: blue;
+        font-family: verdana;
+        font-size: 150%;
+      }
     </style>
-    </head>
+  </head>
 
-    <body>
-      <div id="root"></div>
-      <script
-      crossorigin
-      src="https://unpkg.com/react@16/umd/react.development.js"
-      ></script>
-      <script
-      crossorigin
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-      ></script>
-      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"
-      ></script>
-      <script type="text/babel">
-        function Header() {
-          return (<h1>La maison jungle !</h1>)
+  <body>
+    <div id="root"></div>
 
-        }
-        ReactDOM.render(
-          <Header />,
-           document.getElementById('root')
-         )
+    <script
+    crossorigin
+    src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+    crossorigin
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+    <script type="text/babel">
+    function Banner() {
+    const title = "La maison jungle"
+      return (<h1>{title}</h1>)
+    }
 
-      </script>
+    function Cart() {
+    const monsteraPrice = 8
+    const ivyPrice = 10
+    const flowerPrice = 15
+    return (<div>
+        <h2>Panier</h2>
+        <ul>
+        <li>Monstera : {monsteraPrice}€</li>
+         <li>Lierre : {ivyPrice}€</li>
+         <li>Fleurs : {flowerPrice}€</li>
+        </ul>
+          Total : {monsteraPrice + ivyPrice + flowerPrice }€
+          </div>)
+    }
 
-    </body>
+    ReactDOM.render(<div><Banner /><Cart /></div>, document.getElementById('root'))
+    </script>
 
-</html>
+  </body>
+
+  </html>
